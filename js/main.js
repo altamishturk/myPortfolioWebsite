@@ -28,6 +28,68 @@ nav__linkElem.forEach(elem => {
     })
 });
 
+// ++++++++++++ testimonials section ++++++++++++++++++
+const reviews = [
+    {
+        id: 1,
+        name: "Harpreet kaur",
+        job: `Social Media Strategist and founder
+        OSM Services`,
+        img: "./img/testimonials/1.jpg",
+        text: `It has been a great experience working
+        with Altamish. He was very quick to understand my requirements and execute them. I was so
+        Happy to get see my website complete in merely 3 days. keep it up. `,
+    }
+];
+
+
+const personImg = document.querySelector('#person-img');
+const author = document.querySelector('#author');
+const job = document.querySelector('#job');
+const info = document.querySelector('#info');
+
+//initial index of reviews 
+let index;
+
+// show one persion first 
+index = 0;
+showPerson(index)
+
+const prevBtn = document.querySelector('.prev-btn');
+prevBtn.addEventListener('click', () => {
+
+    if (index == 0) {
+        index = reviews.length - 1;
+        showPerson(index);
+    }
+    else {
+        index = --index;
+        showPerson(index);
+    }
+})
+
+const nextBtn = document.querySelector('.next-btn');
+nextBtn.addEventListener('click', () => {
+
+    if (index == reviews.length - 1) {
+        index = 0;
+        showPerson(index);
+    }
+    else {
+        index = ++index;
+        showPerson(index);
+    }
+
+})
+
+
+function showPerson(index) {
+    personImg.src = reviews[index].img;
+    author.textContent = reviews[index].name;
+    job.textContent = reviews[index].job;
+    info.textContent = reviews[index].text;
+}
+
 
 
 

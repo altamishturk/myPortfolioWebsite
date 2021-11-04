@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web design & development</title>
     <link rel="stylesheet" href="css/mycss.css">
-
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <!----font awsome cdn ----->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
 </head>
 
 <body>
@@ -191,23 +192,26 @@
         <section class="testimonials section" id="testimonials">
             <h2 class="section-title">Testimonials</h2>
             <div class="testimonials__container bd-grid">
-                <div class="testimonials__items">
-                    <div class="testimonials__image">
-                        <img src="./img/testimonials/1.jpg" alt="">
-
+                <article class="review">
+                    <!-- data for this is comming from javascript  -->
+                    <div class="img-container">
+                        <img src="" id="person-img" alt="" />
                     </div>
-                    <div class="testimonials__text">
-                        <p><span><i class="fas fa-quote-left"></i></span>&nbsp; It has been a great experience working
-                            with Altamish. He was very quick to understand my requirements and execute them. I was so
-                            Happy to get see my website complete in merely 3 days. Cudos boy, keep it up.
-                            &nbsp; <span><i class="fas fa-quote-right"></i></span></p>
-                        <div class="delails">
-                            <p class="name">Harpreet</p>
-                            <p class="designation">Social Media Strategist and founder
-                                OSM Services</p>
-                        </div>
+                    <h4 id="author"></h4>
+                    <p id="job"></p>
+                    <p id="info"></p>
+                    <!-- prev next buttons-->
+                    <div class="button-container">
+                        <button class="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                </div>
+                    <!-- random button -->
+                    <!-- <button class="random-btn">surprise me</button> -->
+                </article>
             </div>
         </section>
 
