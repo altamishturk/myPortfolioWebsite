@@ -92,6 +92,46 @@ function showPerson(index) {
 
 
 
+// project section
+let noOfProjectToShow = 5;
+const projects = document.querySelectorAll('.card');
+
+function showProjects(num) {
+    projects.forEach((project, ind) => {
+        if (ind > num) {
+            project.style.display = 'none';
+        }
+        else {
+            project.style.display = 'block';
+        }
+    })
+}
+showProjects(noOfProjectToShow);
+
+const moreBtn = document.querySelector('#moreBtn');
+moreBtn.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (projects.length >= noOfProjectToShow) {
+        showProjects(noOfProjectToShow += 3);
+    }
+
+
+
+    if (projects.length <= noOfProjectToShow) {
+        moreBtn.innerText = 'Less..';
+    }
+
+
+    if (projects.length < noOfProjectToShow) {
+        showProjects(noOfProjectToShow = 5);
+        moreBtn.innerText = 'More..';
+        window.location.href = "#work";
+    }
+})
+
+
+
 
 
 
