@@ -394,6 +394,7 @@ section {
 .skills__icon {
   font-size: 32px;
   color: blue;
+  padding-right: 5px;
 }
 
 .skills__bar {
@@ -433,6 +434,10 @@ section {
 
 .skills__React_Js {
   width: 65%;
+}
+
+.skills__Node_Js {
+  width: 70%;
 }
 
 .skills__Wordpress {
