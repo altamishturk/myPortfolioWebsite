@@ -118,7 +118,7 @@ moreBtn.addEventListener('click', e => {
 
 
 
-    if (projects.length <= noOfProjectToShow) {
+    if (projects.length - 1 <= noOfProjectToShow) {
         moreBtn.innerText = 'Less..';
     }
 
