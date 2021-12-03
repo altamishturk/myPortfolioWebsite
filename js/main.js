@@ -39,6 +39,13 @@ const reviews = [
         text: `It has been a great experience working
         with Altamish. He was very quick to understand my requirements and execute them. I was so
         Happy to get see my website complete in merely 3 days. keep it up. `,
+    },
+    {
+        id: 2,
+        name: "Devapriya Khanna",
+        job: `Founder : 212° Brand Lab and Connexus | Early Stage Investor | Member and Contributor : Forbes Business Council`,
+        img: "./img/testimonials/2.jpg",
+        text: `Very good service. Great communication. Altamish is keen to learn and solve problems, he worked very hard.`,
     }
 ];
 
@@ -53,7 +60,8 @@ let index;
 
 // show one persion first 
 index = 0;
-showPerson(index)
+showPerson(index);
+
 
 const prevBtn = document.querySelector('.prev-btn');
 prevBtn.addEventListener('click', () => {
@@ -89,6 +97,11 @@ function showPerson(index) {
     job.textContent = reviews[index].job;
     info.textContent = reviews[index].text;
 }
+
+// click on next button in every 2 seconds 
+setInterval(() => {
+    nextBtn.click();
+}, 2000);
 
 
 
