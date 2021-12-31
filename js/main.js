@@ -5,6 +5,71 @@ const bx_menuElem = document.querySelector('#menu');
 const nav__linkElem = document.querySelectorAll('.nav__link');
 
 
+// typeWriter effect 
+class TypeWriter {
+    constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
+    }
+
+    type() {
+        // get current index 
+        const currentInd = this.wordIndex % this.words.length;
+        // get current word 
+        const currentWord = this.words[currentInd];
+
+        // check if deleting 
+        if (this.isDeleting) {
+            this.txt = currentWord.substring(0, this.txt.length - 1);
+        }
+        else {
+            this.txt = currentWord.substring(0, this.txt.length + 1);
+        }
+
+        // append into UI 
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+        let typeSpeed = 200;
+        if (this.isDeleting) {
+            typeSpeed = typeSpeed / 2;
+        }
+
+        if (this.txt == currentWord && !this.isDeleting) {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+        }
+        else if (this.txt == '' && this.isDeleting) {
+            this.isDeleting = false;
+            this.wordIndex++;
+        }
+
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
+
+
+
+
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+    const txtElement = document.querySelector('.txt-type');
+    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    const wait = txtElement.getAttribute('data-wait');
+    // Init TypeWriter
+    new TypeWriter(txtElement, words, wait);
+}
+
+
+
 bx_plusElem.addEventListener('click', () => {
 
     nav__menuElem.classList.remove('class_toggle');
