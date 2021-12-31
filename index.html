@@ -78,7 +78,12 @@
                 <div class="about__text__container">
                     <h2 class="about__subtitle">I'm <span>Altamish</span></h2>
                     <p class="about__text"><span>Web developer & Designer.</span>
-                        <span>I have one year of expreance as a web developer</span>
+                        <span>The India, UK, Australia, and the US are among the countries where I work as a freelance
+                            web
+                            developer and designer.</span>
+                        <span>The work I have done does not define me as an individual, I define myself as an individual
+                            based on the work I want to do. Skills can be taught, but personalities are not. I like to
+                            keep learning, keep challenging myself, and do interesting things that matter.</span>
                         <span>I'm helping businesses to showcase their business in the online world</span>
                         <span>I enjoy projects that require problem-solving, in terms of cost efficiency.</span>
                         <span>I’m inspired by companies with big vision and by start-ups with big dreams and I want to
@@ -1033,12 +1038,13 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="https://formspree.io/f/moqydgra" method="POST" class="contact__form">
-                    <input type="text" name="name" placeholder="Enter your name" class="form__input">
-                    <input type="email" name="email" placeholder="Enter  your email" class="form__input">
-                    <input type="number" name="number" placeholder="Enter your no" class="form__input">
-                    <textarea name="text-area" cols="0" rows="10" class="form__input"
+                <form class="contact__form">
+                    <input type="text" required name="name" placeholder="Enter your name" class="form__input">
+                    <input type="email" required name="email" placeholder="Enter  your email" class="form__input">
+                    <input type="number" required name="number" placeholder="Enter your no" class="form__input">
+                    <textarea name="text-area" required cols="0" rows="10" class="form__input"
                         placeholder="Your message"></textarea>
+                    <div class="success_message">Thank You! I will get back to you soon.</div>
                     <input type="Submit" value="submit" class="form__button button">
                 </form>
             </div>
@@ -1061,6 +1067,8 @@
 
     <!--scrool reveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- smtp js  -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!---javascript-->
     <script src="js/main.js"></script>
 </body>

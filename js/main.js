@@ -99,9 +99,9 @@ function showPerson(index) {
 }
 
 // click on next button in every 2 seconds 
-setInterval(() => {
-    nextBtn.click();
-}, 2000);
+// setInterval(() => {
+//     nextBtn.click();
+// }, 2000);
 
 
 
@@ -142,6 +142,51 @@ moreBtn.addEventListener('click', e => {
         window.location.href = "#work";
     }
 })
+
+
+
+// contact form 
+const contactForm = document.querySelector('#contact .contact__form');
+contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "altamishpasha@gmail.com",
+        Password: "ghfmgauvvpaqmkwe",
+        To: 'altamishpasha@gmail.com',
+        From: "altamish.busuness@gmail.com",
+        Subject: "Website Query",
+        Body: `
+        Name: ${e.target[0].value}
+        Email: ${e.target[1].value}
+        Number: ${e.target[2].value}
+        Message: ${e.target[3].value}
+        `
+    }).then(
+        message => {
+            // console.log(message);
+            if (message == 'OK') {
+                contactForm.querySelector('.success_message').style.display = 'block';
+                e.target[0].value = '';
+                e.target[1].value = '';
+                e.target[2].value = '';
+                e.target[3].value = '';
+                setTimeout(() => {
+                    contactForm.querySelector('.success_message').style.display = 'none';
+                    document.querySelector('.nav__menu ul.nav__list li.nav__item:first-child a').click();
+                }, 2000);
+            }
+            else {
+                alert('Server Error! 404');
+            }
+        }
+    );
+});
+
+
+
+
+
 
 
 
