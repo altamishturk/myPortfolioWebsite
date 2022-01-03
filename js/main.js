@@ -175,7 +175,6 @@ setInterval(() => {
 }, 4000);
 
 
-
 // project section
 let noOfProjectToShow = 5;
 const projects = document.querySelectorAll('.card');
