@@ -97,19 +97,26 @@ nav__linkElem.forEach(elem => {
 const reviews = [
     {
         id: 1,
+        name: "Shenal",
+        job: `Motivational speaker`,
+        img: "./img/testimonials/1.jpg",
+        text: `Outstanding experience from Altamish! Excellent communications. Great problem solving. Looking forward to the next job with him`,
+    },
+    {
+        id: 2,
         name: "Harpreet kaur",
         job: `Social Media Strategist and founder
         OSM Services`,
-        img: "./img/testimonials/1.jpg",
+        img: "./img/testimonials/2.jpg",
         text: `It has been a great experience working
         with Altamish. He was very quick to understand my requirements and execute them. I was so
         Happy to get see my website complete in merely 3 days. keep it up. `,
     },
     {
-        id: 2,
+        id: 3,
         name: "Devapriya Khanna",
-        job: `Founder : 212° Brand Lab and Connexus | Early Stage Investor | Member and Contributor : Forbes Business Council`,
-        img: "./img/testimonials/2.jpg",
+        job: `Founder : 212° Brand Lab and Connexus | Member and Contributor : Forbes Business Council`,
+        img: "./img/testimonials/3.jpg",
         text: `Very good service. Great communication. Altamish is keen to learn and solve problems, he worked very hard.`,
     }
 ];
