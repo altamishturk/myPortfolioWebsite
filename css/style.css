@@ -822,6 +822,10 @@ work section
   background: url("/img/projects/36.JPG") 0% 0% / contain no-repeat;
 }
 
+.project-37 .wrapper {
+  background: url("/img/projects/37.JPG") 0% 0% / contain no-repeat;
+}
+
 .card .date {
   position: absolute;
   top: 0;

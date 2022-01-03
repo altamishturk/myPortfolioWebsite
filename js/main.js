@@ -170,9 +170,9 @@ function showPerson(index) {
 }
 
 // click on next button in every 2 seconds 
-// setInterval(() => {
-//     nextBtn.click();
-// }, 2000);
+setInterval(() => {
+    nextBtn.click();
+}, 4000);
 
 
 
@@ -202,7 +202,7 @@ moreBtn.addEventListener('click', e => {
 
 
 
-    if (projects.length - 1 <= noOfProjectToShow) {
+    if (projects.length - 2 <= noOfProjectToShow) {
         moreBtn.innerText = 'Less..';
     }
 
