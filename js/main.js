@@ -105,8 +105,7 @@ const reviews = [
     {
         id: 2,
         name: "Harpreet kaur",
-        job: `Social Media Strategist and founder
-        OSM Services`,
+        job: `Founder : OSM Services`,
         img: "./img/testimonials/2.jpg",
         text: `It has been a great experience working
         with Altamish. He was very quick to understand my requirements and execute them. I was so
@@ -115,7 +114,7 @@ const reviews = [
     {
         id: 3,
         name: "Devapriya Khanna",
-        job: `Founder : 212° Brand Lab and Connexus | Member and Contributor : Forbes Business Council`,
+        job: `Founder : 212° Brand Lab and Connexus`,
         img: "./img/testimonials/3.jpg",
         text: `Very good service. Great communication. Altamish is keen to learn and solve problems, he worked very hard.`,
     }
